@@ -42,32 +42,32 @@ export default function About() {
               AI 공간디자인 전문가 · 크리AI티브 대표
             </p>
 
-            <div className="space-y-5 font-korean text-white/60 leading-relaxed">
+            <div className="space-y-5 font-korean text-white/80 leading-relaxed">
               <p>
                 공간디자인 박사(홍익대)로, 인테리어·전시·VR/AR 프로젝트를 수행해온
                 디자인 전문가입니다.
               </p>
               <p>
                 현재는 생성형 AI를 활용한 공간디자인 교육과 콘텐츠 제작을 중심으로,
-                <span className="text-gold/80"> Midjourney + Gemini + 나노바나나 통합 실무 교육</span>을
+                <span className="text-gold"> Midjourney + Gemini + 나노바나나 통합 실무 교육</span>을
                 진행하고 있습니다.
               </p>
               <p>
-                단순히 이미지를 만드는 것이 아닌, <span className="text-gold/80">"공간을 제안하는 수준"</span>으로
+                단순히 이미지를 만드는 것이 아닌, <span className="text-gold">"공간을 제안하는 수준"</span>으로
                 AI 툴을 활용하는 방법을 가르칩니다.
               </p>
             </div>
 
             {/* Education */}
             <div className="mt-10">
-              <p className="font-korean text-white/30 text-xs tracking-widest uppercase mb-4">학력</p>
+              <p className="font-korean text-white/55 text-xs tracking-widest uppercase mb-4">학력</p>
               <div className="space-y-3">
                 {education.map((edu) => (
                   <div key={edu.school} className="flex gap-4">
-                    <span className="font-korean text-white/25 text-xs mt-0.5 whitespace-nowrap">{edu.year}</span>
+                    <span className="font-korean text-white/50 text-xs mt-0.5 whitespace-nowrap">{edu.year}</span>
                     <div>
-                      <p className="font-korean text-white/60 text-sm">{edu.school}</p>
-                      <p className="font-korean text-white/35 text-xs">{edu.degree}</p>
+                      <p className="font-korean text-white/80 text-sm">{edu.school}</p>
+                      <p className="font-korean text-white/60 text-xs">{edu.degree}</p>
                     </div>
                   </div>
                 ))}
@@ -76,13 +76,13 @@ export default function About() {
 
             {/* Skills */}
             <div className="mt-8">
-              <p className="font-korean text-white/30 text-xs tracking-widest uppercase mb-4">전문 분야</p>
+              <p className="font-korean text-white/55 text-xs tracking-widest uppercase mb-4">전문 분야</p>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="font-korean text-xs px-3 py-1.5 border border-gold/20 text-gold/70
-                               hover:border-gold/50 hover:text-gold transition-colors duration-300"
+                    className="font-korean text-xs px-3 py-1.5 border border-gold/40 text-gold/90
+                               hover:border-gold hover:text-gold transition-colors duration-300"
                   >
                     {skill}
                   </span>
@@ -101,7 +101,7 @@ export default function About() {
                   className="bg-navy p-8 text-center hover:bg-white/[0.03] transition-colors"
                 >
                   <div className="font-display-serif text-4xl text-gold mb-2">{stat.value}</div>
-                  <div className="font-korean text-white/40 text-xs tracking-wider">{stat.label}</div>
+                  <div className="font-korean text-white/65 text-xs tracking-wider">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -109,10 +109,10 @@ export default function About() {
             {/* Quote card */}
             <div className="card-glass p-8 relative">
               <div className="absolute top-4 left-6 font-display-serif text-6xl text-gold/10 leading-none select-none">"</div>
-              <blockquote className="font-korean text-white/70 leading-relaxed relative z-10 pt-4">
+              <blockquote className="font-korean text-white/85 leading-relaxed relative z-10 pt-4">
                 이미지를 만드는 수준이 아니라,
                 <br />
-                <span className="text-gold/80">공간을 제안하는 수준으로.</span>
+                <span className="text-gold">공간을 제안하는 수준으로.</span>
                 <br />
                 AI 툴은 많아졌지만, 실제 디자인에 어떻게 쓰는지를 가르칩니다.
               </blockquote>
@@ -128,8 +128,8 @@ export default function About() {
                 href="https://www.youtube.com/@cri-ai-tive"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 font-korean text-white/40 text-xs border border-white/10
-                           px-4 py-2 hover:border-gold/30 hover:text-white/70 transition-all"
+                className="flex items-center gap-2 font-korean text-white/65 text-xs border border-white/20
+                           px-4 py-2 hover:border-gold/40 hover:text-white/85 transition-all"
               >
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
@@ -140,8 +140,8 @@ export default function About() {
                 href="http://cri-ai-tive.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 font-korean text-white/40 text-xs border border-white/10
-                           px-4 py-2 hover:border-gold/30 hover:text-white/70 transition-all"
+                className="flex items-center gap-2 font-korean text-white/65 text-xs border border-white/20
+                           px-4 py-2 hover:border-gold/40 hover:text-white/85 transition-all"
               >
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
