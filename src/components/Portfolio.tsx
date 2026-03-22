@@ -46,7 +46,7 @@ export default function Portfolio() {
             {items.map((item, i) => (
               <div
                 key={item.id}
-                className="reveal group relative aspect-square overflow-hidden cursor-pointer"
+                className="reveal group relative aspect-video overflow-hidden cursor-pointer"
                 style={{ transitionDelay: `${i * 0.07}s` }}
               >
                 <img
