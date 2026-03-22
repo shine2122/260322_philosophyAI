@@ -115,7 +115,7 @@ export default function About() {
                   key={stat.label}
                   className="bg-navy p-8 text-center hover:bg-white/[0.03] transition-colors"
                 >
-                  <div className="font-display-serif text-4xl text-gold mb-2">{stat.value}</div>
+                  <div className="font-playfair text-4xl text-gold mb-2 font-semibold tracking-wide">{stat.value}</div>
                   <div className="font-korean text-white/65 text-xs tracking-wider">{stat.label}</div>
                 </div>
               ))}

@@ -27,9 +27,11 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        korean: ['"Noto Sans KR"', 'sans-serif'],
-        sans: ['"Noto Sans KR"', 'system-ui', 'sans-serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        'display-serif': ['"Noto Serif KR"', 'Georgia', 'serif'],
+        playfair: ['"Playfair Display"', 'Georgia', 'serif'],
+        korean: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         widest: '0.25em',

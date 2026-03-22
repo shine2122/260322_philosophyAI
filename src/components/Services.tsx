@@ -90,7 +90,7 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <p className="font-display-serif italic text-gold/50 text-sm tracking-wider mb-1">
+              <p className="font-playfair italic text-gold/50 text-sm tracking-wider mb-1">
                 {service.subtitle}
               </p>
               <h3 className="font-korean font-medium text-white text-xl mb-4">
@@ -148,7 +148,7 @@ export default function Services() {
             <div className="flex items-center gap-4 flex-shrink-0">
               <div className="text-right">
                 <p className="font-korean text-white/30 text-xs">수강료</p>
-                <p className="font-display-serif text-2xl text-gold">18만원</p>
+                <p className="font-playfair text-2xl text-gold font-semibold">18만원</p>
               </div>
               <a
                 href="https://forms.gle/jNhUetZUdZLF2ssV7"

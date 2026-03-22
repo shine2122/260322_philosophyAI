@@ -95,7 +95,7 @@ export default function Contact({ onOpenModal }: ContactProps) {
             </button>
 
             <div className="mt-10 pt-10 border-t border-white/[0.07]">
-              <p className="font-display-serif italic text-white/20 text-lg">
+              <p className="font-playfair italic text-white/20 text-lg">
                 "이미지를 만드는 사람이 아니라,
                 <br />
                 공간을 제안하는 사람이 됩니다."

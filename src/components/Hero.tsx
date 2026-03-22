@@ -44,7 +44,7 @@ export default function Hero() {
             <span className="text-gradient-gold italic">설계하다</span>
           </h1>
 
-          <p className="font-display-serif text-xl md:text-2xl text-white/30 italic mb-8 tracking-widest">
+          <p className="font-playfair text-xl md:text-2xl text-white/30 italic mb-8 tracking-widest">
             Designing Spaces with Artificial Intelligence
           </p>
 
