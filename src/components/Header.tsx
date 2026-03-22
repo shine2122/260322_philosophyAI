@@ -9,7 +9,11 @@ const navItems: NavItem[] = [
   { id: 'contact', label: '문의', href: '#contact' },
 ]
 
-export default function Header() {
+interface HeaderProps {
+  onOpenModal: () => void
+}
+
+export default function Header({ onOpenModal }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
@@ -47,6 +51,11 @@ export default function Header() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
+  }
+
+  const handleModalOpen = () => {
+    setMenuOpen(false)
+    onOpenModal()
   }
 
   return (
@@ -100,7 +109,7 @@ export default function Header() {
             제안서 생성기
           </button>
           <button
-            onClick={() => handleNavClick('#contact')}
+            onClick={handleModalOpen}
             className="btn-primary text-xs py-2.5 px-5"
           >
             강의 문의
@@ -151,7 +160,7 @@ export default function Header() {
             </button>
           ))}
           <button
-            onClick={() => handleNavClick('#contact')}
+            onClick={handleModalOpen}
             className="btn-primary text-xs py-3 mt-2 justify-center"
           >
             강의 문의하기

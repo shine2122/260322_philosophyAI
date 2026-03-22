@@ -32,7 +32,11 @@ const contactLinks = [
   },
 ]
 
-export default function Contact() {
+interface ContactProps {
+  onOpenModal: () => void
+}
+
+export default function Contact({ onOpenModal }: ContactProps) {
   return (
     <section id="contact" className="py-32 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-[#080c18] to-navy" />
@@ -79,8 +83,8 @@ export default function Contact() {
 
           {/* Main CTA */}
           <div className="reveal" style={{ transitionDelay: '0.2s' }}>
-            <a
-              href="mailto:cri.ai.tive@gmail.com"
+            <button
+              onClick={onOpenModal}
               className="btn-primary inline-flex"
             >
               강의 문의하기
@@ -88,7 +92,7 @@ export default function Contact() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-            </a>
+            </button>
 
             <div className="mt-10 pt-10 border-t border-white/[0.07]">
               <p className="font-display-serif italic text-white/20 text-lg">

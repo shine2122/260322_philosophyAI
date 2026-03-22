@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -8,8 +8,11 @@ import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ProposalGenerator from './pages/ProposalGenerator'
+import ContactModal from './components/ContactModal'
 
 function PortfolioPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,15 +31,16 @@ function PortfolioPage() {
 
   return (
     <div className="noise-overlay min-h-screen bg-navy text-white overflow-x-hidden">
-      <Header />
+      <Header onOpenModal={() => setIsModalOpen(true)} />
       <main>
         <Hero />
         <About />
         <Services />
         <Portfolio />
-        <Contact />
+        <Contact onOpenModal={() => setIsModalOpen(true)} />
       </main>
       <Footer />
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   )
 }
