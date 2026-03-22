@@ -6,8 +6,8 @@ backend:
 media_library:
   name: cloudinary
   config:
-    cloud_name: YOUR_CLOUD_NAME   # Cloudinary 대시보드에서 확인
-    api_key: YOUR_API_KEY         # Cloudinary 대시보드에서 확인
+    cloud_name: ddvxgonzw
+    api_key: "727218988762267"
 
 collections:
   - name: gallery
