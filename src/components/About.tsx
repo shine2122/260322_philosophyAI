@@ -98,7 +98,7 @@ export default function About() {
             <div className="mb-8 flex justify-center lg:justify-start">
               <div className="relative w-48 h-60 overflow-hidden border border-white/10">
                 <img
-                  src="/images/profile.jpg"
+                  src="/images/KimDongseop.png"
                   alt="김동섭 프로필"
                   className="w-full h-full object-cover object-top"
                 />
