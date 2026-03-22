@@ -71,12 +71,6 @@ export default function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
-            <button
-              onClick={() => handleScroll('demo')}
-              className="btn-outline"
-            >
-              AI 데모 체험하기
-            </button>
           </div>
         </div>
 
