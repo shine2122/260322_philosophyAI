@@ -3,7 +3,7 @@ import galleryData from '../content/gallery.json'
 interface GalleryItem {
   id: string
   title: string
-  tag: string
+  tag?: string
   image: string
 }
 
