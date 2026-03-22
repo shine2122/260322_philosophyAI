@@ -331,7 +331,7 @@ export default function ProposalGenerator() {
               <p className="font-korean text-gray-300 text-xs">
                 텍스트: <code className="bg-gray-100 px-1 rounded text-gray-500">gemini-2.0-flash-lite</code>
                 &nbsp;·&nbsp;
-                이미지: <code className="bg-gray-100 px-1 rounded text-gray-500">gemini-2.0-flash-preview-image-generation</code>
+                이미지: <code className="bg-gray-100 px-1 rounded text-gray-500">gemini-3.1-flash-image-preview</code>
               </p>
             </div>
           </div>

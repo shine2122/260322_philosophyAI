@@ -28,8 +28,7 @@ interface UseProposalGeneratorReturn {
 // Text model for proposal generation
 const TEXT_MODEL = 'gemini-2.0-flash-lite'
 // Image model for proposal images
-const IMAGE_MODEL = 'gemini-2.0-flash-preview-image-generation'
-// const IMAGE_MODEL = 'gemini-3.1-flash-image-preview'
+const IMAGE_MODEL = 'gemini-3.1-flash-image-preview'
 
 function parseProposalSections(text: string): ProposalSection[] {
   const lines = text.split('\n')

@@ -47,8 +47,7 @@ export function useGemini(apiKey: string): UseGeminiReturn {
 
         // Primary model for image generation
         const model = genAI.getGenerativeModel({
-          model: 'gemini-2.0-flash-preview-image-generation',
-          // model: 'gemini-3-pro-image-preview',
+          model: 'gemini-3.1-flash-image-preview',
           generationConfig: {
             responseModalities: ['image', 'text'],
           } as never,
