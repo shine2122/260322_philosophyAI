@@ -1,3 +1,19 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "1",
+      "image": "https://res.cloudinary.com/ddvxgonzw/image/upload/v1773987334/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1_jwivap.png",
+      "title": "test"
+    },
+    {
+      "id": "2",
+      "image": "https://res.cloudinary.com/ddvxgonzw/image/upload/v1773987345/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1_b1n2xv.png",
+      "title": "test"
+    },
+    {
+      "id": "3",
+      "image": "https://res.cloudinary.com/ddvxgonzw/image/upload/v1773987338/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1_jkwam9.png",
+      "title": "test"
+    }
+  ]
 }
