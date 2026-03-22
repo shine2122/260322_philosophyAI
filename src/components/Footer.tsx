@@ -7,9 +7,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo */}
           <div className="flex flex-col items-center md:items-start">
-            <span className="font-display-serif text-gold tracking-widest text-lg">AI SPACE</span>
+            <span className="font-display-serif text-gold tracking-widest text-lg">CRI.AI.TIVE</span>
             <span className="font-korean text-white/20 text-xs tracking-wider mt-0.5">
-              Design × Education
+              크리AI티브 · 김동섭
             </span>
           </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="font-korean text-white/20 text-xs">
-            © {year} AI SPACE. All rights reserved.
+            © {year} 크리AI티브. All rights reserved.
           </p>
         </div>
       </div>

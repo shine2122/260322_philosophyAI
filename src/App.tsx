@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -7,9 +8,9 @@ import GeminiDemo from './components/GeminiDemo'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ProposalGenerator from './pages/ProposalGenerator'
 
-function App() {
-  // Intersection Observer for scroll-reveal animations
+function PortfolioPage() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -21,10 +22,8 @@ function App() {
       },
       { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     )
-
     const elements = document.querySelectorAll('.reveal')
     elements.forEach((el) => observer.observe(el))
-
     return () => observer.disconnect()
   }, [])
 
@@ -44,4 +43,13 @@ function App() {
   )
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PortfolioPage />} />
+        <Route path="/proposal" element={<ProposalGenerator />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}

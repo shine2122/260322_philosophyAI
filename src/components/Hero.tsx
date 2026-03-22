@@ -19,22 +19,20 @@ export default function Hero() {
         }} />
       </div>
 
-      {/* Diagonal accent line */}
       <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-gold/20 to-transparent" />
       <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-gold/10 to-transparent" />
 
-      {/* Glowing orb */}
       <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 left-1/4 w-64 h-64 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 section-container text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Pre-title tag */}
+          {/* Brand tag */}
           <div className="inline-flex items-center gap-3 mb-8">
             <span className="w-8 h-px bg-gold/60" />
             <span className="font-korean text-gold/70 text-xs tracking-[0.3em] uppercase">
-              AI Instructor Portfolio
+              CRI.AI.TIVE · 크리AI티브
             </span>
             <span className="w-8 h-px bg-gold/60" />
           </div>
@@ -46,23 +44,20 @@ export default function Hero() {
             <span className="text-gradient-gold italic">설계하다</span>
           </h1>
 
-          {/* English subtitle */}
           <p className="font-display-serif text-xl md:text-2xl text-white/30 italic mb-8 tracking-widest">
             Designing Spaces with Artificial Intelligence
           </p>
 
-          {/* Divider */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className="w-16 h-px bg-gold/40" />
             <span className="text-gold/40 text-xs">✦</span>
             <span className="w-16 h-px bg-gold/40" />
           </div>
 
-          {/* Korean subtitle */}
           <p className="font-korean text-lg md:text-xl text-white/60 mb-12 tracking-wider leading-relaxed">
-            공간디자인 전공 × AI 교육 전문가
+            공간디자인 박사 × AI 교육 전문가
             <br />
-            <span className="text-white/40 text-base">디자인 감수성으로 AI를 가르칩니다</span>
+            <span className="text-white/40 text-base">Midjourney · Gemini · 나노바나나로 공간을 제안하는 방법</span>
           </p>
 
           {/* CTAs */}

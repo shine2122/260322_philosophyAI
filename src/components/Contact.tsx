@@ -7,28 +7,28 @@ const contactLinks = [
       </svg>
     ),
     label: 'Email',
-    value: 'hello@aispace.kr',
-    href: 'mailto:hello@aispace.kr',
+    value: 'cri.ai.tive@gmail.com',
+    href: 'mailto:cri.ai.tive@gmail.com',
   },
   {
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.141-.828 3.33-.236.995.499 1.806 1.48 1.806 1.773 0 3.141-1.872 3.141-4.573 0-2.39-1.717-4.061-4.168-4.061-2.837 0-4.502 2.126-4.502 4.326 0 .856.33 1.775.741 2.276.082.099.093.186.069.288-.076.309-.244.995-.277 1.134-.045.183-.15.221-.345.133-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
       </svg>
     ),
-    label: 'KakaoTalk',
-    value: '@aispace',
-    href: '#',
+    label: 'YouTube',
+    value: '@cri-ai-tive',
+    href: 'https://www.youtube.com/@cri-ai-tive',
   },
   {
     icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
       </svg>
     ),
-    label: 'Instagram',
-    value: '@aispace_design',
-    href: '#',
+    label: 'Website',
+    value: 'cri-ai-tive.com',
+    href: 'http://cri-ai-tive.com',
   },
 ]
 
@@ -59,7 +59,7 @@ export default function Contact() {
               <a
                 key={link.label}
                 href={link.href}
-                target={link.href.startsWith('mailto') ? undefined : '_blank'}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
                 rel="noopener noreferrer"
                 className="card-glass p-6 flex flex-col items-center gap-3 group"
               >
@@ -80,7 +80,7 @@ export default function Contact() {
           {/* Main CTA */}
           <div className="reveal" style={{ transitionDelay: '0.2s' }}>
             <a
-              href="mailto:hello@aispace.kr"
+              href="mailto:cri.ai.tive@gmail.com"
               className="btn-primary inline-flex"
             >
               강의 문의하기
@@ -92,10 +92,11 @@ export default function Contact() {
 
             <div className="mt-10 pt-10 border-t border-white/[0.07]">
               <p className="font-display-serif italic text-white/20 text-lg">
-                "Design is not just what it looks like and feels like.
+                "이미지를 만드는 사람이 아니라,
                 <br />
-                Design is how it works."
+                공간을 제안하는 사람이 됩니다."
               </p>
+              <p className="font-korean text-white/20 text-xs mt-3">— 크리AI티브 대표 김동섭</p>
             </div>
           </div>
         </div>

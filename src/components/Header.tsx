@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import type { NavItem } from '../types'
 
 const navItems: NavItem[] = [
@@ -13,6 +14,9 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
+  const navigate = useNavigate()
+  const location = useLocation()
+  const isProposalPage = location.pathname === '/proposal'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +39,10 @@ export default function Header() {
 
   const handleNavClick = (href: string) => {
     setMenuOpen(false)
+    if (isProposalPage) {
+      navigate('/' + href)
+      return
+    }
     const id = href.replace('#', '')
     const el = document.getElementById(id)
     if (el) {
@@ -83,6 +91,15 @@ export default function Header() {
               )}
             </button>
           ))}
+          <button
+            onClick={() => navigate('/proposal')}
+            className="font-korean text-sm tracking-wider transition-all duration-300 relative py-1 text-white/60 hover:text-gold flex items-center gap-1.5"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            제안서 생성기
+          </button>
           <button
             onClick={() => handleNavClick('#contact')}
             className="btn-primary text-xs py-2.5 px-5"
