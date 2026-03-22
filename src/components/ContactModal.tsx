@@ -15,6 +15,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [sendError, setSendError] = useState(false)
   const overlayRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -23,6 +25,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     } else {
       document.body.style.overflow = ''
       setSubmitted(false)
+      setSending(false)
+      setSendError(false)
       setForm({ name: '', organization: '', email: '', phone: '', type: '', message: '' })
     }
     return () => { document.body.style.overflow = '' }
@@ -46,14 +50,30 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(`[강의문의] ${form.type} - ${form.name}`)
-    const body = encodeURIComponent(
-      `이름: ${form.name}\n소속: ${form.organization || '-'}\n이메일: ${form.email}\n연락처: ${form.phone || '-'}\n문의 유형: ${form.type}\n\n문의 내용:\n${form.message}`
-    )
-    window.open(`mailto:cri.ai.tive@gmail.com?subject=${subject}&body=${body}`)
-    setSubmitted(true)
+    setSending(true)
+    setSendError(false)
+    const encode = (data: Record<string, string>) =>
+      Object.entries(data)
+        .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+        .join('&')
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact', ...form }),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setSendError(true)
+      }
+    } catch {
+      setSendError(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   const inputClass =
@@ -214,11 +234,17 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </div>
 
                 {/* Submit */}
+                {sendError && (
+                  <p className="font-korean text-red-400 text-xs text-center">
+                    전송에 실패했습니다. 잠시 후 다시 시도해주세요.
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="w-full btn-primary justify-center py-4 text-sm tracking-wider"
+                  disabled={sending}
+                  className="w-full btn-primary justify-center py-4 text-sm tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  문의 보내기
+                  {sending ? '전송 중...' : '문의 보내기'}
                 </button>
               </form>
             </>
