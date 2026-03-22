@@ -7,7 +7,6 @@ import Services from './components/Services'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import ProposalGenerator from './pages/ProposalGenerator'
 import ContactModal from './components/ContactModal'
 
 function PortfolioPage() {
@@ -50,7 +49,6 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PortfolioPage />} />
-        <Route path="/proposal" element={<ProposalGenerator />} />
       </Routes>
     </BrowserRouter>
   )
