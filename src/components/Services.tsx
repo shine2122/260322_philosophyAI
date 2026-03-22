@@ -142,7 +142,7 @@ export default function Services() {
                 미드저니 & 나노바나나로 AI 공간디자인 5주 완성 과정
               </h3>
               <p className="font-korean text-white/40 text-sm">
-                4월 15일 ~ 5월 13일 · 매주 수요일 오후 8시~10시 · Google Meet 실시간 강의 · 정원 8명
+                00월 00일 ~ 00월 00일 · 매주 수요일 오후 8시~10시 · Google Meet 실시간 강의 · 정원 8명
               </p>
             </div>
             <div className="flex items-center gap-4 flex-shrink-0">
