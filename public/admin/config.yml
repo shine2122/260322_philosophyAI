@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Cloudinary 미디어 라이브러리
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: YOUR_CLOUD_NAME   # Cloudinary 대시보드에서 확인
+    api_key: YOUR_API_KEY         # Cloudinary 대시보드에서 확인
+
+collections:
+  - name: gallery
+    label: 갤러리
+    files:
+      - name: gallery_items
+        label: 갤러리 이미지 목록
+        file: src/content/gallery.json
+        fields:
+          - name: items
+            label: 이미지
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - name: id
+                label: ID
+                widget: string
+                default: ""
+                hint: 고유 식별자 (자동 생성됩니다)
+              - name: title
+                label: 제목
+                widget: string
+                hint: 이미지 제목을 입력하세요
+              - name: tag
+                label: 태그
+                widget: string
+                required: false
+                hint: 예) 인테리어, 공간디자인 (선택사항)
+              - name: image
+                label: 이미지
+                widget: image
+                hint: Cloudinary에서 이미지를 선택하거나 업로드하세요

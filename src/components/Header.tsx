@@ -5,7 +5,6 @@ import type { NavItem } from '../types'
 const navItems: NavItem[] = [
   { id: 'about', label: '소개', href: '#about' },
   { id: 'services', label: '강의', href: '#services' },
-  { id: 'demo', label: 'AI 데모', href: '#demo' },
   { id: 'portfolio', label: '갤러리', href: '#portfolio' },
   { id: 'contact', label: '문의', href: '#contact' },
 ]
