@@ -91,8 +91,23 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right: Stats + Quote */}
+          {/* Right: Photo + Stats + Quote */}
           <div className="reveal" style={{ transitionDelay: '0.15s' }}>
+
+            {/* Profile photo */}
+            <div className="mb-8 flex justify-center lg:justify-start">
+              <div className="relative w-48 h-60 overflow-hidden border border-white/10">
+                <img
+                  src="/images/profile.jpg"
+                  alt="김동섭 프로필"
+                  className="w-full h-full object-cover object-top"
+                />
+                {/* subtle gold corner accent */}
+                <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-gold/40 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-gold/40 pointer-events-none" />
+              </div>
+            </div>
+
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-px bg-white/[0.05] mb-8">
               {stats.map((stat) => (
