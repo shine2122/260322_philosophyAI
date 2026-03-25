@@ -147,7 +147,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
             <div className="flex items-center gap-4 flex-shrink-0">
               <div className="text-right">
                 <p className="font-korean text-white/30 text-xs">수강료</p>
-                <p className="font-playfair text-xl text-gold font-semibold">1회(2시간)당 수강료, 4만원</p>
+                <p className="font-playfair text-xl text-gold font-semibold">1회(2시간)당 수강료, 5만원</p>
               </div>
               <button
                 onClick={onOpenModal}
