@@ -11,7 +11,6 @@ const services = [
     description: 'Midjourney + Gemini + 나노바나나를 연결해 공간디자인 실무 흐름 전체를 익히는 과정. 이미지 생성부터 리노베이션 시안, 포트폴리오까지 완성합니다.',
     features: ['Midjourney 심화 활용', '나노바나나 고급 수정', '리노베이션 시안 제작', '최종 공간 제안서 완성'],
     badge: '5회 / 10시간',
-    link: 'https://forms.gle/jNhUetZUdZLF2ssV7',
   },
   {
     number: '02',
@@ -25,7 +24,6 @@ const services = [
     description: '서울예술대학교, 경기대학교 등 대학 강의 및 기업 특강 진행. AI 공간디자인 실무 워크플로우를 현장 중심으로 전달합니다.',
     features: ['공간디자인 전공 대상', '기업 업무 프로세스 연계', 'ComfyUI · Mixboard 활용', '데이터 시각화 포함'],
     badge: '맞춤 설계',
-    link: 'mailto:cri.ai.tive@gmail.com',
   },
   {
     number: '03',
@@ -39,11 +37,14 @@ const services = [
     description: '개인/기업 맞춤형 AI 도구 활용 전략 수립. 현재 디자인 업무 프로세스를 분석하고 최적의 AI 도입 방안을 함께 설계합니다.',
     features: ['현업 프로세스 분석', 'AI 툴 선정 및 세팅', '맞춤 워크플로우 설계', '지속적 사후 지원'],
     badge: '집중 코칭',
-    link: 'mailto:cri.ai.tive@gmail.com',
   },
 ]
 
-export default function Services() {
+interface ServicesProps {
+  onOpenModal: () => void
+}
+
+export default function Services({ onOpenModal }: ServicesProps) {
   return (
     <section id="services" className="py-32 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-navy to-[#080c18]" />
@@ -113,10 +114,8 @@ export default function Services() {
               </ul>
 
               {/* CTA */}
-              <a
-                href={service.link}
-                target={service.link.startsWith('http') ? '_blank' : undefined}
-                rel="noopener noreferrer"
+              <button
+                onClick={onOpenModal}
                 className="font-korean text-gold/70 text-sm tracking-wider flex items-center gap-2
                            hover:text-gold transition-colors duration-300 group/btn"
               >
@@ -125,7 +124,7 @@ export default function Services() {
                   fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </button>
 
               <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent
                               scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
@@ -142,22 +141,20 @@ export default function Services() {
                 미드저니 & 나노바나나로 AI 공간디자인 5주 완성 과정
               </h3>
               <p className="font-korean text-white/40 text-sm">
-                00월 00일 ~ 00월 00일 · 매주 수요일 오후 8시~10시 · Google Meet 실시간 강의 · 정원 8명
+                04월 22일 ~ 05월 13일 · 매주 수요일 오후 8시~10시 · Google Meet 실시간 강의 · 정원 8명
               </p>
             </div>
             <div className="flex items-center gap-4 flex-shrink-0">
               <div className="text-right">
                 <p className="font-korean text-white/30 text-xs">수강료</p>
-                <p className="font-playfair text-2xl text-gold font-semibold">18만원</p>
+                <p className="font-playfair text-xl text-gold font-semibold">1회(2시간)당 수강료, 4만원</p>
               </div>
-              <a
-                href="https://forms.gle/jNhUetZUdZLF2ssV7"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={onOpenModal}
                 className="btn-primary text-xs py-3"
               >
-                사전 신청하기
-              </a>
+                강의 문의하기
+              </button>
             </div>
           </div>
         </div>

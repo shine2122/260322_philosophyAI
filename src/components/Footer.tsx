@@ -15,8 +15,8 @@ export default function Footer() {
 
           {/* Nav links */}
           <nav className="flex items-center gap-6">
-            {['소개', '강의', 'AI 데모', '갤러리', '문의'].map((item, i) => {
-              const ids = ['about', 'services', 'demo', 'portfolio', 'contact']
+            {['소개', '강의', '갤러리', '문의'].map((item, i) => {
+              const ids = ['about', 'services', 'portfolio', 'contact']
               return (
                 <button
                   key={item}

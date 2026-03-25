@@ -5,6 +5,8 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
 import Portfolio from './components/Portfolio'
+import CareerSection from './components/CareerSection'
+import TestimonialsSection from './components/TestimonialsSection'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ContactModal from './components/ContactModal'
@@ -34,8 +36,10 @@ function PortfolioPage() {
       <main>
         <Hero />
         <About />
-        <Services />
+        <Services onOpenModal={() => setIsModalOpen(true)} />
         <Portfolio />
+        <CareerSection />
+        <TestimonialsSection />
         <Contact onOpenModal={() => setIsModalOpen(true)} />
       </main>
       <Footer />
