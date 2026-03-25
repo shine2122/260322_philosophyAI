@@ -37,6 +37,19 @@ export default function About() {
             <p className="section-tag mb-4">About</p>
             <h2 className="font-display-serif text-4xl md:text-5xl text-white mb-2 leading-tight">
               김동섭
+              <span
+                className="font-korean block"
+                style={{
+                  fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)',
+                  fontWeight: 400,
+                  color: 'var(--color-gold)',
+                  letterSpacing: '0.05em',
+                  marginTop: '0.25rem',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                활동명 : 크리AI티브
+              </span>
             </h2>
             <p className="font-korean text-gold/70 tracking-wider mb-8">
               AI 공간디자인 전문가 · 크리AI티브 대표
