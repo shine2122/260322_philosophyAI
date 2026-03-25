@@ -6,11 +6,11 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
       </svg>
     ),
-    title: 'AI 공간디자인 5주 완성 과정',
+    title: 'AI 공간디자인 4주 완성 과정',
     subtitle: 'Space Design Course',
     description: 'Midjourney + Gemini + 나노바나나를 연결해 공간디자인 실무 흐름 전체를 익히는 과정. 이미지 생성부터 리노베이션 시안, 포트폴리오까지 완성합니다.',
     features: ['Midjourney 심화 활용', '나노바나나 고급 수정', '리노베이션 시안 제작', '최종 공간 제안서 완성'],
-    badge: '5회 / 10시간',
+    badge: '4회 / 8시간',
   },
   {
     number: '02',
@@ -138,7 +138,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
             <div>
               <p className="font-korean text-white/30 text-xs tracking-widest uppercase mb-2">현재 모집 중</p>
               <h3 className="font-korean font-medium text-white text-lg mb-1">
-                미드저니 & 나노바나나로 AI 공간디자인 5주 완성 과정
+                미드저니 & 나노바나나로 AI 공간디자인 4주 완성 과정
               </h3>
               <p className="font-korean text-white/40 text-sm">
                 04월 22일 ~ 05월 13일 · 매주 수요일 오후 8시~10시 · Google Meet 실시간 강의 · 정원 8명
@@ -149,12 +149,25 @@ export default function Services({ onOpenModal }: ServicesProps) {
                 <p className="font-korean text-white/30 text-xs">수강료</p>
                 <p className="font-playfair text-xl text-gold font-semibold">1회(2시간)당 수강료, 5만원</p>
               </div>
-              <button
-                onClick={onOpenModal}
-                className="btn-primary text-xs py-3"
-              >
-                강의 문의하기
-              </button>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://maddening-soccer-338.notion.site/AI-5-10-3264fca4d3fd80fdbdace63a0a280a14?pvs=74"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-korean text-xs py-3 px-5 border border-gold/60 text-gold/90 bg-transparent
+                             hover:border-gold hover:text-gold transition-colors duration-300 text-center tracking-wider"
+                >
+                  커리큘럼 확인
+                </a>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfoUW4CT_hdzcWZllXBaEPQpABmpiZ_1JtichZgyZcIzB4MfA/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary text-xs py-3 text-center"
+                >
+                  사전 수강신청
+                </a>
+              </div>
             </div>
           </div>
         </div>
