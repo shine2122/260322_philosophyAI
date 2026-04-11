@@ -138,7 +138,7 @@ export default function Services({ onOpenModal }: ServicesProps) {
             <div>
               <p className="font-korean text-white/30 text-xs tracking-widest uppercase mb-2">2기 · 5월초 모집 예정</p>
               <h3 className="font-korean font-medium text-white text-lg mb-1">
-                미드저니 8 & 바노바나나 AI 공간디자인 4주 과정 — 2기
+                미드저니 8 & 바노바나나 AI 공간디자인 4주 과정
               </h3>
               <p className="font-korean text-white/40 text-sm">
                 5월 27일 ~ 6월 17일 · 매주 수요일 오후 8시~10시 · Google Meet 실시간 강의 · 정원 8명
