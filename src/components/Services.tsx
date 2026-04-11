@@ -136,18 +136,18 @@ export default function Services({ onOpenModal }: ServicesProps) {
         <div className="mt-12 reveal card-glass p-8 border border-gold/10">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <p className="font-korean text-white/30 text-xs tracking-widest uppercase mb-2">현재 모집 중</p>
+              <p className="font-korean text-white/30 text-xs tracking-widest uppercase mb-2">2기 · 5월초 모집 예정</p>
               <h3 className="font-korean font-medium text-white text-lg mb-1">
-                미드저니 & 나노바나나로 AI 공간디자인 4주 완성 과정
+                미드저니 8 & 바노바나나 AI 공간디자인 4주 과정 — 2기
               </h3>
               <p className="font-korean text-white/40 text-sm">
-                04월 22일 ~ 05월 13일 · 매주 수요일 오후 8시~10시 · Google Meet 실시간 강의 · 정원 8명
+                5월 27일 ~ 6월 17일 · 매주 수요일 오후 8시~10시 · Google Meet 실시간 강의 · 정원 8명
               </p>
             </div>
             <div className="flex items-center gap-4 flex-shrink-0">
               <div className="text-right">
                 <p className="font-korean text-white/30 text-xs">수강료</p>
-                <p className="font-playfair text-xl text-gold font-semibold">1회(2시간)당 수강료, 5만원</p>
+                <p className="font-playfair text-xl text-gold font-semibold">1회(2시간)당 수강료, 6만원</p>
               </div>
               <div className="flex flex-col gap-2">
                 <a
@@ -157,15 +157,13 @@ export default function Services({ onOpenModal }: ServicesProps) {
                   className="font-korean text-xs py-3 px-5 border border-gold/60 text-gold/90 bg-transparent
                              hover:border-gold hover:text-gold transition-colors duration-300 text-center tracking-wider"
                 >
-                  커리큘럼 확인
+                  커리큘럼 참고
                 </a>
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfoUW4CT_hdzcWZllXBaEPQpABmpiZ_1JtichZgyZcIzB4MfA/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:cri.ai.tive@gmail.com"
                   className="btn-primary text-xs py-3 text-center"
                 >
-                  사전 수강신청
+                  이메일 문의
                 </a>
               </div>
             </div>
